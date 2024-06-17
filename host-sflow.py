@@ -23,6 +23,9 @@ ONOS_USER = str(config.get("onos", "user"))
 ONOS_PASS = str(config.get("onos", "password"))
 ONOS_FLOWS_URL = f"{ONOS_URL}/onos/v1/intents"
 
+# Host network address
+HOST_NETWORK = str(config.get("host", "network")
+
 '''
     Install rules stored in a json file into Onos Controller
 '''
@@ -82,8 +85,9 @@ def createVeths():
     Creates and configures the network
 '''
 def demo_network():
-    info( '*** Creating the virtual ethernet pairs to communicate with the host\n' )
+    info( '*** Deleting old virtual ethernet pairs\n' )
     deleteVeths(['root-h1', 'root-h2', 'root-h3', 'root-h4'])
+    info( '*** Creating the virtual ethernet pairs to communicate with the host\n' )
     createVeths()
 
     info( '*** Creating Mininet network\n')
@@ -147,16 +151,16 @@ def demo_network():
     info( '*** Adding IP address to root-namespace interfaces\n' )
     # h1
     h1.cmd( ' ip addr add 192.168.0.101/24 dev h1-root' )
-    h1.cmd( ' ip route add 192.168.124.0/24 dev h1-root ' )
+    h1.cmd( ' ip route add ' + HOST_NETWORK + ' dev h1-root ' )
     # h2
     h2.cmd( ' ip addr add 192.168.0.102/24 dev h2-root' )
-    h2.cmd( ' ip route add 192.168.124.0/24 dev h2-root ' )
+    h2.cmd( ' ip route add ' + HOST_NETWORK + ' dev h1-root ' )
     # h3
     h3.cmd( ' ip addr add 192.168.0.103/24 dev h3-root' )
-    h3.cmd( ' ip route add 192.168.124.0/24 dev h3-root ' )
+    h3.cmd( ' ip route add ' + HOST_NETWORK + ' dev h1-root ' )
     # h4
     h4.cmd( ' ip addr add 192.168.0.104/24 dev h4-root' )
-    h4.cmd( ' ip route add 192.168.124.0/24 dev h4-root ' )
+    h4.cmd( ' ip route add ' + HOST_NETWORK + ' dev h1-root ' )
 
     info( '*** Waiting 2 seconds to update topology in ONOS\n')
     sleep(2)
