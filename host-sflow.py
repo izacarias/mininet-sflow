@@ -46,10 +46,10 @@ def install_flows_from_file(file_name):
             headers=headers, 
             auth=credentials
         )
-        if response.status_code == 201:
+        if response.status_code in [200, 201]:
             # set_of_flows[0]["flows"][0]["id"]
             for flow in obj_flow["flows"]:
-                info( "*** Flow rule installed. key=" + flow["id"] + "\n")
+                info( f'*** Flow rule installed. key={flow["id"]}\n')
         else:
             for flow in obj_flow["flows"]:
                 error( "*** Got wrong answer from ONOS. Flow rule not installed. key=" + flow["id"] + "\n")
