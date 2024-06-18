@@ -21,7 +21,6 @@ config.read("config.ini")
 ONOS_URL = str(config.get("onos", "url"))
 ONOS_USER = str(config.get("onos", "user"))
 ONOS_PASS = str(config.get("onos", "password"))
-ONOS_FLOWS_URL = f"{ONOS_URL}/onos/v1/intents"
 
 # Host network address
 HOST_NETWORK = str(config.get("host", "network"))
@@ -31,6 +30,7 @@ HOST_NETWORK = str(config.get("host", "network"))
 '''
 def install_flows_from_file(file_name):
     info( '*** Installing flows from ' + file_name + "\n")
+    ONOS_FLOWS_URL = f"{ONOS_URL}/onos/v1/flows?appId=org.onosproject.ibn'"
     credentials = HTTPBasicAuth(ONOS_USER, ONOS_PASS)
     headers = {"Content-Type": "application/json", "Accept": "application/json"}
     # Load flows from file_name
