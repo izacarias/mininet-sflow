@@ -35,7 +35,7 @@
                 {
                     "type": "ETH_DST",
                     "mac": "8e:e1:03:00:00:02"
-                },
+                }
             ]
         },
         "treatment": {
@@ -59,7 +59,7 @@
                 {
                     "type": "ETH_DST",
                     "mac": "8e:e1:03:00:00:03"
-                },
+                }
             ]
         },
         "treatment": {
@@ -83,7 +83,7 @@
                 {
                     "type": "ETH_DST",
                     "mac": "8e:e1:03:00:00:04"
-                },
+                }
             ]
         },
         "treatment": {
@@ -107,7 +107,7 @@
                 {
                     "type": "ETH_DST",
                     "mac": "8e:e1:03:00:00:05"
-                },
+                }
             ]
         },
         "treatment": {
@@ -131,7 +131,7 @@
                 {
                     "type": "ETH_DST",
                     "mac": "8e:e1:03:00:00:06"
-                },
+                }
             ]
         },
         "treatment": {
@@ -155,7 +155,7 @@
                 {
                     "type": "ETH_DST",
                     "mac": "8e:e1:03:00:00:07"
-                },
+                }
             ]
         },
         "treatment": {
@@ -179,7 +179,7 @@
                 {
                     "type": "ETH_DST",
                     "mac": "8e:e1:03:00:00:08"
-                },
+                }
             ]
         },
         "treatment": {
@@ -203,7 +203,7 @@
                 {
                     "type": "IN_PORT",
                     "port": "1"
-                },
+                }
             ]
         },
         "treatment": {
@@ -227,7 +227,7 @@
                 {
                     "type": "IN_PORT",
                     "port": "2"
-                },
+                }
             ]
         },
         "treatment": {
@@ -251,7 +251,7 @@
                 {
                     "type": "IN_PORT",
                     "port": "3"
-                },
+                }
             ]
         },
         "treatment": {
@@ -275,7 +275,7 @@
                 {
                     "type": "IN_PORT",
                     "port": "4"
-                },
+                }
             ]
         },
         "treatment": {
@@ -299,7 +299,7 @@
                 {
                     "type": "IN_PORT",
                     "port": "1"
-                },
+                }
             ]
         },
         "treatment": {
@@ -323,7 +323,7 @@
                 {
                     "type": "IN_PORT",
                     "port": "2"
-                },
+                }
             ]
         },
         "treatment": {
@@ -347,7 +347,7 @@
                 {
                     "type": "IN_PORT",
                     "port": "3"
-                },
+                }
             ]
         },
         "treatment": {
@@ -371,7 +371,7 @@
                 {
                     "type": "IN_PORT",
                     "port": "4"
-                },
+                }
             ]
         },
         "treatment": {
@@ -382,5 +382,5 @@
                 }
             ]
         }
-    },
+    }
 ]
