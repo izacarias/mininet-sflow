@@ -36,18 +36,21 @@ def install_flows_from_file(file_name):
     # Load flows from file_name
     flows = []
     with open(file_name, 'r') as openfile:
-        flows = json.load(openfile)
-    for flow in flows:
+        set_of_flows = json.load(openfile)
+    for obj_flow in set_of_flows:
         response = requests.post(
             ONOS_FLOWS_URL, 
-            data=json.dumps(flow), 
+            data=json.dumps(obj_flow), 
             headers=headers, 
             auth=credentials
         )
         if response.status_code == 201:
-            info( "*** Flow rule installed. key=" + flow["id"] + "\n")
+            # set_of_flows[0]["flows"][0]["id"]
+            for flow in obj_flow["flows"]:
+                info( "*** Flow rule installed. key=" + flow["id"] + "\n")
         else:
-            error( "*** Got wrong answer from ONOS. Flow rule not installed. key=" + flow["id"] + "\n")
+            for flow in obj_flow["flows"]:
+                error( "*** Got wrong answer from ONOS. Flow rule not installed. key=" + flow["id"] + "\n")
 
 
 '''
