@@ -1,0 +1,386 @@
+[
+    {
+        "id": "ibn-s1-h1",
+        "appId": "org.onosproject.ibn",
+        "priority": 100,
+        "timeout": 0,
+        "isPermanent": true,
+        "deviceId": "of:0000000000000001",
+        "selector": {
+            "criteria": [
+                {
+                    "type": "ETH_DST",
+                    "mac": "8e:e1:03:00:00:01"
+                },
+            ]
+        },
+        "treatment": {
+            "instructions": [
+                {
+                    "type": "OUTPUT",
+                    "port": "1"
+                }
+            ]
+        }
+    },
+    {
+        "id": "ibn-s1-h2",
+        "appId": "org.onosproject.ibn",
+        "priority": 100,
+        "timeout": 0,
+        "isPermanent": true,
+        "deviceId": "of:0000000000000001",
+        "selector": {
+            "criteria": [
+                {
+                    "type": "ETH_DST",
+                    "mac": "8e:e1:03:00:00:02"
+                },
+            ]
+        },
+        "treatment": {
+            "instructions": [
+                {
+                    "type": "OUTPUT",
+                    "port": "2"
+                }
+            ]
+        }
+    },
+    {
+        "id": "ibn-s1-h3",
+        "appId": "org.onosproject.ibn",
+        "priority": 100,
+        "timeout": 0,
+        "isPermanent": true,
+        "deviceId": "of:0000000000000001",
+        "selector": {
+            "criteria": [
+                {
+                    "type": "ETH_DST",
+                    "mac": "8e:e1:03:00:00:03"
+                },
+            ]
+        },
+        "treatment": {
+            "instructions": [
+                {
+                    "type": "OUTPUT",
+                    "port": "3"
+                }
+            ]
+        }
+    },
+    {
+        "id": "ibn-s1-h4",
+        "appId": "org.onosproject.ibn",
+        "priority": 100,
+        "timeout": 0,
+        "isPermanent": true,
+        "deviceId": "of:0000000000000001",
+        "selector": {
+            "criteria": [
+                {
+                    "type": "ETH_DST",
+                    "mac": "8e:e1:03:00:00:04"
+                },
+            ]
+        },
+        "treatment": {
+            "instructions": [
+                {
+                    "type": "OUTPUT",
+                    "port": "4"
+                }
+            ]
+        }
+    },
+    {
+        "id": "ibn-s2-h5",
+        "appId": "org.onosproject.ibn",
+        "priority": 100,
+        "timeout": 0,
+        "isPermanent": true,
+        "deviceId": "of:0000000000000002",
+        "selector": {
+            "criteria": [
+                {
+                    "type": "ETH_DST",
+                    "mac": "8e:e1:03:00:00:05"
+                },
+            ]
+        },
+        "treatment": {
+            "instructions": [
+                {
+                    "type": "OUTPUT",
+                    "port": "1"
+                }
+            ]
+        }
+    },
+    {
+        "id": "ibn-s2-h6",
+        "appId": "org.onosproject.ibn",
+        "priority": 100,
+        "timeout": 0,
+        "isPermanent": true,
+        "deviceId": "of:0000000000000002",
+        "selector": {
+            "criteria": [
+                {
+                    "type": "ETH_DST",
+                    "mac": "8e:e1:03:00:00:06"
+                },
+            ]
+        },
+        "treatment": {
+            "instructions": [
+                {
+                    "type": "OUTPUT",
+                    "port": "2"
+                }
+            ]
+        }
+    },
+    {
+        "id": "ibn-s2-h7",
+        "appId": "org.onosproject.ibn",
+        "priority": 100,
+        "timeout": 0,
+        "isPermanent": true,
+        "deviceId": "of:0000000000000002",
+        "selector": {
+            "criteria": [
+                {
+                    "type": "ETH_DST",
+                    "mac": "8e:e1:03:00:00:07"
+                },
+            ]
+        },
+        "treatment": {
+            "instructions": [
+                {
+                    "type": "OUTPUT",
+                    "port": "3"
+                }
+            ]
+        }
+    },
+    {
+        "id": "ibn-s2-h8",
+        "appId": "org.onosproject.ibn",
+        "priority": 100,
+        "timeout": 0,
+        "isPermanent": true,
+        "deviceId": "of:0000000000000002",
+        "selector": {
+            "criteria": [
+                {
+                    "type": "ETH_DST",
+                    "mac": "8e:e1:03:00:00:08"
+                },
+            ]
+        },
+        "treatment": {
+            "instructions": [
+                {
+                    "type": "OUTPUT",
+                    "port": "4"
+                }
+            ]
+        }
+    },
+    {
+        "id": "ibn-s1-h1-p1",
+        "appId": "org.onosproject.ibn",
+        "priority": 100,
+        "timeout": 0,
+        "isPermanent": true,
+        "deviceId": "of:0000000000000001",
+        "selector": {
+            "criteria": [
+                {
+                    "type": "IN_PORT",
+                    "port": "1"
+                },
+            ]
+        },
+        "treatment": {
+            "instructions": [
+                {
+                    "type": "OUTPUT",
+                    "port": "5"
+                }
+            ]
+        }
+    },
+    {
+        "id": "ibn-h2-p1",
+        "appId": "org.onosproject.ibn",
+        "priority": 100,
+        "timeout": 0,
+        "isPermanent": true,
+        "deviceId": "of:0000000000000001",
+        "selector": {
+            "criteria": [
+                {
+                    "type": "IN_PORT",
+                    "port": "2"
+                },
+            ]
+        },
+        "treatment": {
+            "instructions": [
+                {
+                    "type": "OUTPUT",
+                    "port": "5"
+                }
+            ]
+        }
+    },
+    {
+        "id": "ibn-h3-p1",
+        "appId": "org.onosproject.ibn",
+        "priority": 100,
+        "timeout": 0,
+        "isPermanent": true,
+        "deviceId": "of:0000000000000001",
+        "selector": {
+            "criteria": [
+                {
+                    "type": "IN_PORT",
+                    "port": "3"
+                },
+            ]
+        },
+        "treatment": {
+            "instructions": [
+                {
+                    "type": "OUTPUT",
+                    "port": "5"
+                }
+            ]
+        }
+    },
+    {
+        "id": "ibn-h4-p1",
+        "appId": "org.onosproject.ibn",
+        "priority": 100,
+        "timeout": 0,
+        "isPermanent": true,
+        "deviceId": "of:0000000000000001",
+        "selector": {
+            "criteria": [
+                {
+                    "type": "IN_PORT",
+                    "port": "4"
+                },
+            ]
+        },
+        "treatment": {
+            "instructions": [
+                {
+                    "type": "OUTPUT",
+                    "port": "5"
+                }
+            ]
+        }
+    },
+    {
+        "id": "ibn-h5-p1",
+        "appId": "org.onosproject.ibn",
+        "priority": 100,
+        "timeout": 0,
+        "isPermanent": true,
+        "deviceId": "of:0000000000000002",
+        "selector": {
+            "criteria": [
+                {
+                    "type": "IN_PORT",
+                    "port": "1"
+                },
+            ]
+        },
+        "treatment": {
+            "instructions": [
+                {
+                    "type": "OUTPUT",
+                    "port": "5"
+                }
+            ]
+        }
+    },
+    {
+        "id": "ibn-h6-p1",
+        "appId": "org.onosproject.ibn",
+        "priority": 100,
+        "timeout": 0,
+        "isPermanent": true,
+        "deviceId": "of:0000000000000002",
+        "selector": {
+            "criteria": [
+                {
+                    "type": "IN_PORT",
+                    "port": "2"
+                },
+            ]
+        },
+        "treatment": {
+            "instructions": [
+                {
+                    "type": "OUTPUT",
+                    "port": "5"
+                }
+            ]
+        }
+    },
+    {
+        "id": "ibn-h7-p1",
+        "appId": "org.onosproject.ibn",
+        "priority": 100,
+        "timeout": 0,
+        "isPermanent": true,
+        "deviceId": "of:0000000000000002",
+        "selector": {
+            "criteria": [
+                {
+                    "type": "IN_PORT",
+                    "port": "3"
+                },
+            ]
+        },
+        "treatment": {
+            "instructions": [
+                {
+                    "type": "OUTPUT",
+                    "port": "5"
+                }
+            ]
+        }
+    },
+    {
+        "id": "ibn-h8-p1",
+        "appId": "org.onosproject.ibn",
+        "priority": 100,
+        "timeout": 0,
+        "isPermanent": true,
+        "deviceId": "of:0000000000000002",
+        "selector": {
+            "criteria": [
+                {
+                    "type": "IN_PORT",
+                    "port": "4"
+                },
+            ]
+        },
+        "treatment": {
+            "instructions": [
+                {
+                    "type": "OUTPUT",
+                    "port": "5"
+                }
+            ]
+        }
+    },
+]

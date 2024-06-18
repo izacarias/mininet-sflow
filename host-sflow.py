@@ -24,25 +24,30 @@ ONOS_PASS = str(config.get("onos", "password"))
 ONOS_FLOWS_URL = f"{ONOS_URL}/onos/v1/intents"
 
 # Host network address
-HOST_NETWORK = str(config.get("host", "network")
+HOST_NETWORK = str(config.get("host", "network"))
 
 '''
     Install rules stored in a json file into Onos Controller
 '''
-def install_rules_from_file(filename):
-    info( '*** Install flow rules from ' + filename )
+def install_flows_from_file(file_name):
+    info( '*** Installing flows from ' + file_name + "\n")
     credentials = HTTPBasicAuth(ONOS_USER, ONOS_PASS)
     headers = {"Content-Type": "application/json", "Accept": "application/json"}
-    # Load rules from monflows.json
-    rules = []
-    with open(filename, 'r') as openfile:
-        rules = json.load(openfile)
-    for rule in rules:
-        response = requests.post(ONOS_FLOWS_URL, data=json.dumps(rule), headers=headers, auth=credentials)
+    # Load flows from file_name
+    flows = []
+    with open(file_name, 'r') as openfile:
+        flows = json.load(openfile)
+    for flow in flows:
+        response = requests.post(
+            ONOS_FLOWS_URL, 
+            data=json.dumps(flow), 
+            headers=headers, 
+            auth=credentials
+        )
         if response.status_code == 201:
-            info( "*** Flow rule installed. key=" + rule["key"] + "\n")
+            info( "*** Flow rule installed. key=" + flow["id"] + "\n")
         else:
-            error( "*** Got wrong answer from ONOS. Flow rule not installed. key=" + rule["key"] + "\n")
+            error( "*** Got wrong answer from ONOS. Flow rule not installed. key=" + flow["id"] + "\n")
 
 
 '''
@@ -104,15 +109,15 @@ def demo_network():
     s2 = net.addSwitch('s2', cls=OVSKernelSwitch, protocols="OpenFlow13")
 
     info( '*** Add hosts\n')
-    h1 = net.addHost('h1', cls=Host, ip='10.0.0.1', defaultRoute=None)
-    h2 = net.addHost('h2', cls=Host, ip='10.0.0.2', defaultRoute=None)
-    h3 = net.addHost('h3', cls=Host, ip='10.0.0.3', defaultRoute=None)
-    h4 = net.addHost('h4', cls=Host, ip='10.0.0.4', defaultRoute=None)
+    h1 = net.addHost('h1', cls=Host, ip='10.0.0.1', mac='8e:e1:03:00:00:01', defaultRoute=None)
+    h2 = net.addHost('h2', cls=Host, ip='10.0.0.2', mac='8e:e1:03:00:00:02', defaultRoute=None)
+    h3 = net.addHost('h3', cls=Host, ip='10.0.0.3', mac='8e:e1:03:00:00:03', defaultRoute=None)
+    h4 = net.addHost('h4', cls=Host, ip='10.0.0.4', mac='8e:e1:03:00:00:04', defaultRoute=None)
 
-    h5 = net.addHost('h5', cls=Host, ip='10.0.0.5', defaultRoute=None)
-    h6 = net.addHost('h6', cls=Host, ip='10.0.0.6', defaultRoute=None)
-    h7 = net.addHost('h7', cls=Host, ip='10.0.0.7', defaultRoute=None)
-    h8 = net.addHost('h8', cls=Host, ip='10.0.0.8', defaultRoute=None)
+    h5 = net.addHost('h5', cls=Host, ip='10.0.0.5', mac='8e:e1:03:00:00:05', defaultRoute=None)
+    h6 = net.addHost('h6', cls=Host, ip='10.0.0.6', mac='8e:e1:03:00:00:06', defaultRoute=None)
+    h7 = net.addHost('h7', cls=Host, ip='10.0.0.7', mac='8e:e1:03:00:00:07', defaultRoute=None)
+    h8 = net.addHost('h8', cls=Host, ip='10.0.0.8', mac='8e:e1:03:00:00:08', defaultRoute=None)
 
     info( '*** Connect hosts to s1\n')
     net.addLink(h1, s1, bw=1000)
@@ -166,10 +171,14 @@ def demo_network():
     sleep(2)
     
     info( '*** Selecting Link 1 for all hosts\n')
-    # install_rules_from_file("select-l1.json")
+    install_flows_from_file("select-p1")
 
     info( '*** Starting Mininet CLI' )
     CLI(net)
+
+    info( '*** Stopping network\n' )
+    net.stop()
+    
     
 '''
     Call the main function
