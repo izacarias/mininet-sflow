@@ -39,7 +39,7 @@ def install_flows_from_file(file_name):
         set_of_flows = json.load(openfile)
     for obj_flow in set_of_flows:
         data = json.dumps(obj_flow)
-        info( "*** Installing flow " + json.dumps(data) + "\n")
+        info( "*** Installing flow " + data + "\n")
         response = requests.post(
             ONOS_FLOWS_URL, 
             data=data, 
