@@ -30,7 +30,7 @@ HOST_NETWORK = str(config.get("host", "network"))
 '''
 def install_flows_from_file(file_name):
     info( '*** Installing flows from ' + file_name + "\n")
-    ONOS_FLOWS_URL = f"{ONOS_URL}/onos/v1/flows?appId=org.onosproject.ibn'"
+    ONOS_FLOWS_URL = f"{ONOS_URL}/onos/v1/flows?appId=org.onosproject.ibn"
     credentials = HTTPBasicAuth(ONOS_USER, ONOS_PASS)
     headers = {"Content-Type": "application/json", "Accept": "application/json"}
     # Load flows from file_name
@@ -176,7 +176,7 @@ def demo_network():
     sleep(2)
     
     info( '*** Selecting Link 1 for all hosts\n')
-    install_flows_from_file("select-p1.json")
+    # install_flows_from_file("select-p1.json")
 
     info( '*** Starting Mininet CLI' )
     CLI(net)
