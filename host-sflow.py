@@ -171,7 +171,7 @@ def demo_network():
     sleep(2)
     
     info( '*** Selecting Link 1 for all hosts\n')
-    install_flows_from_file("select-p1")
+    install_flows_from_file("select-p1.json")
 
     info( '*** Starting Mininet CLI' )
     CLI(net)
