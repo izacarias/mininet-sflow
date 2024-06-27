@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  sflow-rt:
+    image: sflow/sflow-rt
+    container_name: sflow-rt
+    restart: unless-stopped
+    volumes:
+      - ./sflow-rt/store:/sflow-rt/store    
+    ports:
+      - '6343:6343/udp'
+      - '8008:8008'
+

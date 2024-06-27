@@ -4,7 +4,7 @@
             {
                 "id": "ibn-s1-h1",
                 "appId": "org.onosproject.ibn",
-                "priority": 100,
+                "priority": 40000,
                 "timeout": 0,
                 "isPermanent": true,
                 "deviceId": "of:0000000000000001",
@@ -32,7 +32,7 @@
             {
                 "id": "ibn-s1-h2",
                 "appId": "org.onosproject.ibn",
-                "priority": 100,
+                "priority": 40000,
                 "timeout": 0,
                 "isPermanent": true,
                 "deviceId": "of:0000000000000001",
@@ -60,7 +60,7 @@
             {
                 "id": "ibn-s1-h3",
                 "appId": "org.onosproject.ibn",
-                "priority": 100,
+                "priority": 40000,
                 "timeout": 0,
                 "isPermanent": true,
                 "deviceId": "of:0000000000000001",
@@ -88,7 +88,7 @@
             {
                 "id": "ibn-s1-h4",
                 "appId": "org.onosproject.ibn",
-                "priority": 100,
+                "priority": 40000,
                 "timeout": 0,
                 "isPermanent": true,
                 "deviceId": "of:0000000000000001",
@@ -116,7 +116,7 @@
             {
                 "id": "ibn-s2-h5",
                 "appId": "org.onosproject.ibn",
-                "priority": 100,
+                "priority": 40000,
                 "timeout": 0,
                 "isPermanent": true,
                 "deviceId": "of:0000000000000002",
@@ -144,7 +144,7 @@
             {
                 "id": "ibn-s2-h6",
                 "appId": "org.onosproject.ibn",
-                "priority": 100,
+                "priority": 40000,
                 "timeout": 0,
                 "isPermanent": true,
                 "deviceId": "of:0000000000000002",
@@ -172,7 +172,7 @@
             {
                 "id": "ibn-s2-h7",
                 "appId": "org.onosproject.ibn",
-                "priority": 100,
+                "priority": 40000,
                 "timeout": 0,
                 "isPermanent": true,
                 "deviceId": "of:0000000000000002",
@@ -200,7 +200,7 @@
             {
                 "id": "ibn-s2-h8",
                 "appId": "org.onosproject.ibn",
-                "priority": 100,
+                "priority": 40000,
                 "timeout": 0,
                 "isPermanent": true,
                 "deviceId": "of:0000000000000002",
@@ -228,7 +228,7 @@
             {
                 "id": "ibn-s1-h1-p1",
                 "appId": "org.onosproject.ibn",
-                "priority": 100,
+                "priority": 40000,
                 "timeout": 0,
                 "isPermanent": true,
                 "deviceId": "of:0000000000000001",
@@ -236,7 +236,7 @@
                     "criteria": [
                         {
                             "type": "IN_PORT",
-                            "port": "1"
+                            "mac": "2"
                         }
                     ]
                 },
@@ -256,7 +256,7 @@
             {
                 "id": "ibn-h2-p1",
                 "appId": "org.onosproject.ibn",
-                "priority": 100,
+                "priority": 40000,
                 "timeout": 0,
                 "isPermanent": true,
                 "deviceId": "of:0000000000000001",
@@ -284,7 +284,7 @@
             {
                 "id": "ibn-h3-p1",
                 "appId": "org.onosproject.ibn",
-                "priority": 100,
+                "priority": 40000,
                 "timeout": 0,
                 "isPermanent": true,
                 "deviceId": "of:0000000000000001",
@@ -312,7 +312,7 @@
             {
                 "id": "ibn-h4-p1",
                 "appId": "org.onosproject.ibn",
-                "priority": 100,
+                "priority": 40000,
                 "timeout": 0,
                 "isPermanent": true,
                 "deviceId": "of:0000000000000001",
@@ -340,7 +340,7 @@
             {
                 "id": "ibn-h5-p1",
                 "appId": "org.onosproject.ibn",
-                "priority": 100,
+                "priority": 40000,
                 "timeout": 0,
                 "isPermanent": true,
                 "deviceId": "of:0000000000000002",
@@ -368,7 +368,7 @@
             {
                 "id": "ibn-h6-p1",
                 "appId": "org.onosproject.ibn",
-                "priority": 100,
+                "priority": 40000,
                 "timeout": 0,
                 "isPermanent": true,
                 "deviceId": "of:0000000000000002",
@@ -396,7 +396,7 @@
             {
                 "id": "ibn-h7-p1",
                 "appId": "org.onosproject.ibn",
-                "priority": 100,
+                "priority": 40000,
                 "timeout": 0,
                 "isPermanent": true,
                 "deviceId": "of:0000000000000002",
@@ -424,7 +424,7 @@
             {
                 "id": "ibn-h8-p1",
                 "appId": "org.onosproject.ibn",
-                "priority": 100,
+                "priority": 40000,
                 "timeout": 0,
                 "isPermanent": true,
                 "deviceId": "of:0000000000000002",
