@@ -178,8 +178,8 @@ def demo_network():
     info( '*** Waiting 2 seconds to update topology in ONOS\n')
     sleep(2)
     
-    info( '*** Selecting Link 1 for all hosts\n')
-    install_flows_from_file("select-p1.json")
+    info( '*** Installing ARP rules\n')
+    install_flows_from_file("or-arp.json")
 
     info( '*** Starting Mininet CLI' )
     CLI(net)
