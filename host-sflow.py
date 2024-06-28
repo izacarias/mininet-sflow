@@ -39,7 +39,7 @@ def install_flows_from_file(file_name):
         set_of_flows = json.load(openfile)
     for obj_flow in set_of_flows:
         data = json.dumps(obj_flow)
-        info( "*** Installing flow " + data + "\n")
+        # info( "*** Installing flow " + data + "\n")
         response = requests.post(
             ONOS_FLOWS_URL, 
             data=data, 
@@ -52,7 +52,10 @@ def install_flows_from_file(file_name):
                 info( f'*** Flow rule installed. key={flow["id"]}\n')
         else:
             for flow in obj_flow["flows"]:
+                err_code = response.json()["code"]
+                err_msg = response.json()["message"]
                 error( "*** Got wrong answer from ONOS. Flow rule not installed. key=" + flow["id"] + "\n")
+                error( "*** The error was: " + err_msg + "\n")
 
 
 '''
@@ -176,7 +179,7 @@ def demo_network():
     sleep(2)
     
     info( '*** Selecting Link 1 for all hosts\n')
-    # install_flows_from_file("select-p1.json")
+    install_flows_from_file("select-p1.json")
 
     info( '*** Starting Mininet CLI' )
     CLI(net)
