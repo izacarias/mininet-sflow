@@ -1,0 +1,461 @@
+dbg1:readSystemUUID: <4c253d42-fc70-6979-f820-4e7e20ffb0aa>
+hsflowd version 2.1.08
+_root:adaptor lo came up
+_root:adaptor h1-eth0 came up
+_root:adaptor h1-root came up
+_root:readL3Addresses: ifa_name=lo up=1 loopback=1 promisc=0 bond(master=0,slave=0)
+_root:readL3Addresses: ifa_name=h1-eth0 up=1 loopback=0 promisc=0 bond(master=0,slave=0)
+_root:readL3Addresses: ifa_name=h1-root up=1 loopback=0 promisc=0 bond(master=0,slave=0)
+_root:readL3Addresses: ifa_name=lo up=1 loopback=1 promisc=0 bond(master=0,slave=0)
+_root:readL3Addresses: found=127.0.0.1
+
+_root:readL3Addresses: ifa_name=h1-eth0 up=1 loopback=0 promisc=0 bond(master=0,slave=0)
+_root:readL3Addresses: found=10.0.0.1
+
+_root:readL3Addresses: ifa_name=h1-root up=1 loopback=0 promisc=0 bond(master=0,slave=0)
+_root:readL3Addresses: found=192.168.0.101
+
+_root:readL3Addresses: ifa_name=lo up=1 loopback=1 promisc=0 bond(master=0,slave=0)
+_root:readL3Addresses: found=::1
+
+_root:readL3Addresses: ifa_name=h1-eth0 up=1 loopback=0 promisc=0 bond(master=0,slave=0)
+_root:readL3Addresses: found=fe80::8ce1:3ff:fe00:1
+
+_root:readL3Addresses: ifa_name=h1-root up=1 loopback=0 promisc=0 bond(master=0,slave=0)
+_root:readL3Addresses: found=fe80::f48e:91ff:fe1a:8b61
+
+_root:readL3Addresses: found 3 extra L3 addresses
+_root:adaptor lo has v6 address 00000000000000000000000000000001 with scope 0x10
+_root:adaptor h1-eth0 has v6 address fe800000000000008ce103fffe000001 with scope 0x20
+_root:adaptor h1-root has v6 address fe80000000000000f48e91fffe1a8b61 with scope 0x20
+dbg1:selectAgentAddress
+dbg1:selectAgentAddress selected agentIP with highest priority: device=h1-eth0, address=10.0.0.1, previous=0.0.0.0, changed=YES
+dbg1:Using UUID read from BIOS (dmidecode)
+dbg1:creating sfl agent
+dbg1:creating sfl agent
+dbg1:installSFlowSettings: detected new config
+_root:ETHTOOL_GMODULEINF0 lo failed : Operation not supported
+_root:ETHTOOL_GMODULEINF0 h1-eth0 failed : Operation not supported
+dbg1:setAdaptorSpeed(ETHTOOL_GLINKSETTINGS2): h1-eth0 ifSpeed 0 -> 10000000000
+_root:Interface h1-eth0 (ifIndex=2) has peer_ifindex=2084
+_root:ETHTOOL_GMODULEINF0 h1-root failed : Operation not supported
+dbg1:setAdaptorSpeed(ETHTOOL_GLINKSETTINGS2): h1-root ifSpeed 0 -> 10000000000
+_root:Interface h1-root (ifIndex=2076) has peer_ifindex=2077
+_root:readL3Addresses: ifa_name=lo up=1 loopback=1 promisc=0 bond(master=0,slave=0)
+_root:readL3Addresses: ifa_name=h1-eth0 up=1 loopback=0 promisc=0 bond(master=0,slave=0)
+_root:readL3Addresses: ifa_name=h1-root up=1 loopback=0 promisc=0 bond(master=0,slave=0)
+_root:readL3Addresses: ifa_name=lo up=1 loopback=1 promisc=0 bond(master=0,slave=0)
+_root:readL3Addresses: found=127.0.0.1
+
+_root:readL3Addresses: ifa_name=h1-eth0 up=1 loopback=0 promisc=0 bond(master=0,slave=0)
+_root:readL3Addresses: found=10.0.0.1
+
+_root:readL3Addresses: ifa_name=h1-root up=1 loopback=0 promisc=0 bond(master=0,slave=0)
+_root:readL3Addresses: found=192.168.0.101
+
+_root:readL3Addresses: ifa_name=lo up=1 loopback=1 promisc=0 bond(master=0,slave=0)
+_root:readL3Addresses: found=::1
+
+_root:readL3Addresses: ifa_name=h1-eth0 up=1 loopback=0 promisc=0 bond(master=0,slave=0)
+_root:readL3Addresses: found=fe80::8ce1:3ff:fe00:1
+
+_root:readL3Addresses: ifa_name=h1-root up=1 loopback=0 promisc=0 bond(master=0,slave=0)
+_root:readL3Addresses: found=fe80::f48e:91ff:fe1a:8b61
+
+_root:readL3Addresses: found 3 extra L3 addresses
+_root:adaptor lo has v6 address 00000000000000000000000000000001 with scope 0x10
+_root:adaptor h1-eth0 has v6 address fe800000000000008ce103fffe000001 with scope 0x20
+_root:adaptor h1-root has v6 address fe80000000000000f48e91fffe1a8b61 with scope 0x20
+dbg1:evt_config_first: first valid configuration
+dbg1:main: evt_config_changed()
+dbg1:evt_config_shake: reply from poll
+mod_pcap:addBPFSocket(h1-eth0) speed=10000000000
+dbg1:h1-eth0 (speed=10000000000) using speed_default sampling rate = 10000
+mod_pcap:device h1-eth0 opened OK
+mod_pcap:device h1-eth0 offers DLT=1 (EN10MB)
+mod_pcap:device h1-eth0 offers DLT=143 (DOCSIS)
+mod_pcap:device h1-eth0 selecting encapsulation=1 (EN10MB)
+mod_pcap:setKernelSampling() kernel version (as int) == 5015000
+mod_pcap:sampling rate set to 10000 for dev=h1-eth0
+mod_pcap:setsockopt (SO_ATTACH_FILTER) status=0
+mod_pcap:kernel sampling OK
+dbg1:evt_config_shake: reply from packet
+dbg1:evt_config_shake: sync complete
+dbg1:drop_priviliges: getuid=0
+getrlimit(__RLIMIT_MEMLOCK) = 4206551040 (max=4206551040)
+getrlimit(__RLIMIT_NPROC) = 127916 (max=127916)
+getrlimit(RLIMIT_STACK) = 8388608 (max=4294967295)
+getrlimit(RLIMIT_CORE) = 0 (max=0)
+getrlimit(RLIMIT_CPU) = 4294967295 (max=4294967295)
+getrlimit(RLIMIT_DATA) = 4294967295 (max=4294967295)
+getrlimit(RLIMIT_FSIZE) = 4294967295 (max=4294967295)
+getrlimit(__RLIMIT_RSS) = 4294967295 (max=4294967295)
+getrlimit(RLIMIT_NOFILE) = 16384 (max=1048576)
+getrlimit(RLIMIT_AS) = 4294967295 (max=4294967295)
+getrlimit(__RLIMIT_LOCKS) = 4294967295 (max=4294967295)
+mod_tcp:tx=0, rx=0, lost=0, timeout=0, annotated=0, ipip_tx=0, sockets=0
+_root:Interface h1-eth0 (ifIndex=2) has peer_ifindex=2084
+_root:Interface h1-root (ifIndex=2076) has peer_ifindex=2077
+_root:readL3Addresses: ifa_name=lo up=1 loopback=1 promisc=0 bond(master=0,slave=0)
+_root:readL3Addresses: ifa_name=h1-eth0 up=1 loopback=0 promisc=0 bond(master=0,slave=0)
+_root:readL3Addresses: ifa_name=h1-root up=1 loopback=0 promisc=0 bond(master=0,slave=0)
+_root:readL3Addresses: ifa_name=lo up=1 loopback=1 promisc=0 bond(master=0,slave=0)
+_root:readL3Addresses: found=127.0.0.1
+
+_root:readL3Addresses: ifa_name=h1-eth0 up=1 loopback=0 promisc=0 bond(master=0,slave=0)
+_root:readL3Addresses: found=10.0.0.1
+
+_root:readL3Addresses: ifa_name=h1-root up=1 loopback=0 promisc=0 bond(master=0,slave=0)
+_root:readL3Addresses: found=192.168.0.101
+
+_root:readL3Addresses: ifa_name=lo up=1 loopback=1 promisc=0 bond(master=0,slave=0)
+_root:readL3Addresses: found=::1
+
+_root:readL3Addresses: ifa_name=h1-eth0 up=1 loopback=0 promisc=0 bond(master=0,slave=0)
+_root:readL3Addresses: found=fe80::8ce1:3ff:fe00:1
+
+_root:readL3Addresses: ifa_name=h1-root up=1 loopback=0 promisc=0 bond(master=0,slave=0)
+_root:readL3Addresses: found=fe80::f48e:91ff:fe1a:8b61
+
+_root:readL3Addresses: found 3 extra L3 addresses
+_root:adaptor lo has v6 address 00000000000000000000000000000001 with scope 0x10
+_root:adaptor h1-eth0 has v6 address fe800000000000008ce103fffe000001 with scope 0x20
+_root:adaptor h1-root has v6 address fe80000000000000f48e91fffe1a8b61 with scope 0x20
+_root:interfaces added: 0 removed: 0 cameup: 0 wentdown: 0 changed: 2
+dbg1:selectAgentAddress
+dbg1:selectAgentAddress selected agentIP with highest priority: device=h1-eth0, address=10.0.0.1, previous=10.0.0.1, changed=NO
+_root:agentAddressChanged=NO
+_root:instances: adaptors=3, localIP=6
+dbg1:syncOutputFile
+mod_tcp:tx=0, rx=0, lost=0, timeout=0, annotated=0, ipip_tx=0, sockets=0
+mod_tcp:tx=0, rx=0, lost=0, timeout=0, annotated=0, ipip_tx=0, sockets=0
+mod_tcp:tx=0, rx=0, lost=0, timeout=0, annotated=0, ipip_tx=0, sockets=0
+mod_tcp:tx=0, rx=0, lost=0, timeout=0, annotated=0, ipip_tx=0, sockets=0
+mod_tcp:tx=0, rx=0, lost=0, timeout=0, annotated=0, ipip_tx=0, sockets=0
+mod_tcp:tx=0, rx=0, lost=0, timeout=0, annotated=0, ipip_tx=0, sockets=0
+mod_tcp:tx=0, rx=0, lost=0, timeout=0, annotated=0, ipip_tx=0, sockets=0
+mod_tcp:tx=0, rx=0, lost=0, timeout=0, annotated=0, ipip_tx=0, sockets=0
+mod_tcp:tx=0, rx=0, lost=0, timeout=0, annotated=0, ipip_tx=0, sockets=0
+mod_tcp:tx=0, rx=0, lost=0, timeout=0, annotated=0, ipip_tx=0, sockets=0
+mod_tcp:tx=0, rx=0, lost=0, timeout=0, annotated=0, ipip_tx=0, sockets=0
+mod_tcp:tx=0, rx=0, lost=0, timeout=0, annotated=0, ipip_tx=0, sockets=0
+mod_tcp:tx=0, rx=0, lost=0, timeout=0, annotated=0, ipip_tx=0, sockets=0
+mod_tcp:tx=0, rx=0, lost=0, timeout=0, annotated=0, ipip_tx=0, sockets=0
+mod_tcp:tx=0, rx=0, lost=0, timeout=0, annotated=0, ipip_tx=0, sockets=0
+mod_tcp:tx=0, rx=0, lost=0, timeout=0, annotated=0, ipip_tx=0, sockets=0
+mod_tcp:tx=0, rx=0, lost=0, timeout=0, annotated=0, ipip_tx=0, sockets=0
+Received SIGINT
+dbg1:readSystemUUID: <4c253d42-fc70-6979-f820-4e7e20ffb0aa>
+hsflowd version 2.1.08
+_root:adaptor lo came up
+_root:adaptor h1-eth0 came up
+_root:adaptor h1-root came up
+_root:readL3Addresses: ifa_name=lo up=1 loopback=1 promisc=0 bond(master=0,slave=0)
+_root:readL3Addresses: ifa_name=h1-eth0 up=1 loopback=0 promisc=0 bond(master=0,slave=0)
+_root:readL3Addresses: ifa_name=h1-root up=1 loopback=0 promisc=0 bond(master=0,slave=0)
+_root:readL3Addresses: ifa_name=lo up=1 loopback=1 promisc=0 bond(master=0,slave=0)
+_root:readL3Addresses: found=127.0.0.1
+
+_root:readL3Addresses: ifa_name=h1-eth0 up=1 loopback=0 promisc=0 bond(master=0,slave=0)
+_root:readL3Addresses: found=10.0.0.1
+
+_root:readL3Addresses: ifa_name=h1-root up=1 loopback=0 promisc=0 bond(master=0,slave=0)
+_root:readL3Addresses: found=192.168.0.101
+
+_root:readL3Addresses: ifa_name=lo up=1 loopback=1 promisc=0 bond(master=0,slave=0)
+_root:readL3Addresses: found=::1
+
+_root:readL3Addresses: ifa_name=h1-eth0 up=1 loopback=0 promisc=0 bond(master=0,slave=0)
+_root:readL3Addresses: found=fe80::8ce1:3ff:fe00:1
+
+_root:readL3Addresses: ifa_name=h1-root up=1 loopback=0 promisc=0 bond(master=0,slave=0)
+_root:readL3Addresses: found=fe80::f48e:91ff:fe1a:8b61
+
+_root:readL3Addresses: found 3 extra L3 addresses
+_root:adaptor lo has v6 address 00000000000000000000000000000001 with scope 0x10
+_root:adaptor h1-eth0 has v6 address fe800000000000008ce103fffe000001 with scope 0x20
+_root:adaptor h1-root has v6 address fe80000000000000f48e91fffe1a8b61 with scope 0x20
+dbg1:selectAgentAddress
+dbg1:selectAgentAddress selected agentIP with highest priority: device=h1-eth0, address=10.0.0.1, previous=0.0.0.0, changed=YES
+dbg1:Using UUID read from BIOS (dmidecode)
+dbg1:creating sfl agent
+dbg1:creating sfl agent
+dbg1:installSFlowSettings: detected new config
+_root:ETHTOOL_GMODULEINF0 lo failed : Operation not supported
+_root:ETHTOOL_GMODULEINF0 h1-eth0 failed : Operation not supported
+dbg1:setAdaptorSpeed(ETHTOOL_GLINKSETTINGS2): h1-eth0 ifSpeed 0 -> 10000000000
+_root:Interface h1-eth0 (ifIndex=2) has peer_ifindex=2084
+_root:ETHTOOL_GMODULEINF0 h1-root failed : Operation not supported
+dbg1:setAdaptorSpeed(ETHTOOL_GLINKSETTINGS2): h1-root ifSpeed 0 -> 10000000000
+_root:Interface h1-root (ifIndex=2076) has peer_ifindex=2077
+_root:readL3Addresses: ifa_name=lo up=1 loopback=1 promisc=0 bond(master=0,slave=0)
+_root:readL3Addresses: ifa_name=h1-eth0 up=1 loopback=0 promisc=0 bond(master=0,slave=0)
+_root:readL3Addresses: ifa_name=h1-root up=1 loopback=0 promisc=0 bond(master=0,slave=0)
+_root:readL3Addresses: ifa_name=lo up=1 loopback=1 promisc=0 bond(master=0,slave=0)
+_root:readL3Addresses: found=127.0.0.1
+
+_root:readL3Addresses: ifa_name=h1-eth0 up=1 loopback=0 promisc=0 bond(master=0,slave=0)
+_root:readL3Addresses: found=10.0.0.1
+
+_root:readL3Addresses: ifa_name=h1-root up=1 loopback=0 promisc=0 bond(master=0,slave=0)
+_root:readL3Addresses: found=192.168.0.101
+
+_root:readL3Addresses: ifa_name=lo up=1 loopback=1 promisc=0 bond(master=0,slave=0)
+_root:readL3Addresses: found=::1
+
+_root:readL3Addresses: ifa_name=h1-eth0 up=1 loopback=0 promisc=0 bond(master=0,slave=0)
+_root:readL3Addresses: found=fe80::8ce1:3ff:fe00:1
+
+_root:readL3Addresses: ifa_name=h1-root up=1 loopback=0 promisc=0 bond(master=0,slave=0)
+_root:readL3Addresses: found=fe80::f48e:91ff:fe1a:8b61
+
+_root:readL3Addresses: found 3 extra L3 addresses
+_root:adaptor lo has v6 address 00000000000000000000000000000001 with scope 0x10
+_root:adaptor h1-eth0 has v6 address fe800000000000008ce103fffe000001 with scope 0x20
+_root:adaptor h1-root has v6 address fe80000000000000f48e91fffe1a8b61 with scope 0x20
+dbg1:evt_config_first: first valid configuration
+dbg1:main: evt_config_changed()
+dbg1:evt_config_shake: reply from poll
+mod_pcap:addBPFSocket(h1-eth0) speed=10000000000
+dbg1:h1-eth0 (speed=10000000000) using speed_default sampling rate = 10000
+mod_pcap:device h1-eth0 opened OK
+mod_pcap:device h1-eth0 offers DLT=1 (EN10MB)
+mod_pcap:device h1-eth0 offers DLT=143 (DOCSIS)
+mod_pcap:device h1-eth0 selecting encapsulation=1 (EN10MB)
+mod_pcap:setKernelSampling() kernel version (as int) == 5015000
+mod_pcap:sampling rate set to 10000 for dev=h1-eth0
+mod_pcap:setsockopt (SO_ATTACH_FILTER) status=0
+mod_pcap:kernel sampling OK
+dbg1:evt_config_shake: reply from packet
+dbg1:evt_config_shake: sync complete
+dbg1:drop_priviliges: getuid=0
+getrlimit(__RLIMIT_MEMLOCK) = 4206551040 (max=4206551040)
+getrlimit(__RLIMIT_NPROC) = 127916 (max=127916)
+getrlimit(RLIMIT_STACK) = 8388608 (max=4294967295)
+getrlimit(RLIMIT_CORE) = 0 (max=0)
+getrlimit(RLIMIT_CPU) = 4294967295 (max=4294967295)
+getrlimit(RLIMIT_DATA) = 4294967295 (max=4294967295)
+getrlimit(RLIMIT_FSIZE) = 4294967295 (max=4294967295)
+getrlimit(__RLIMIT_RSS) = 4294967295 (max=4294967295)
+getrlimit(RLIMIT_NOFILE) = 16384 (max=1048576)
+getrlimit(RLIMIT_AS) = 4294967295 (max=4294967295)
+getrlimit(__RLIMIT_LOCKS) = 4294967295 (max=4294967295)
+mod_tcp:tx=0, rx=0, lost=0, timeout=0, annotated=0, ipip_tx=0, sockets=0
+_root:Interface h1-eth0 (ifIndex=2) has peer_ifindex=2084
+_root:Interface h1-root (ifIndex=2076) has peer_ifindex=2077
+_root:readL3Addresses: ifa_name=lo up=1 loopback=1 promisc=0 bond(master=0,slave=0)
+_root:readL3Addresses: ifa_name=h1-eth0 up=1 loopback=0 promisc=0 bond(master=0,slave=0)
+_root:readL3Addresses: ifa_name=h1-root up=1 loopback=0 promisc=0 bond(master=0,slave=0)
+_root:readL3Addresses: ifa_name=lo up=1 loopback=1 promisc=0 bond(master=0,slave=0)
+_root:readL3Addresses: found=127.0.0.1
+
+_root:readL3Addresses: ifa_name=h1-eth0 up=1 loopback=0 promisc=0 bond(master=0,slave=0)
+_root:readL3Addresses: found=10.0.0.1
+
+_root:readL3Addresses: ifa_name=h1-root up=1 loopback=0 promisc=0 bond(master=0,slave=0)
+_root:readL3Addresses: found=192.168.0.101
+
+_root:readL3Addresses: ifa_name=lo up=1 loopback=1 promisc=0 bond(master=0,slave=0)
+_root:readL3Addresses: found=::1
+
+_root:readL3Addresses: ifa_name=h1-eth0 up=1 loopback=0 promisc=0 bond(master=0,slave=0)
+_root:readL3Addresses: found=fe80::8ce1:3ff:fe00:1
+
+_root:readL3Addresses: ifa_name=h1-root up=1 loopback=0 promisc=0 bond(master=0,slave=0)
+_root:readL3Addresses: found=fe80::f48e:91ff:fe1a:8b61
+
+_root:readL3Addresses: found 3 extra L3 addresses
+_root:adaptor lo has v6 address 00000000000000000000000000000001 with scope 0x10
+_root:adaptor h1-eth0 has v6 address fe800000000000008ce103fffe000001 with scope 0x20
+_root:adaptor h1-root has v6 address fe80000000000000f48e91fffe1a8b61 with scope 0x20
+_root:interfaces added: 0 removed: 0 cameup: 0 wentdown: 0 changed: 2
+dbg1:selectAgentAddress
+dbg1:selectAgentAddress selected agentIP with highest priority: device=h1-eth0, address=10.0.0.1, previous=10.0.0.1, changed=NO
+_root:agentAddressChanged=NO
+_root:instances: adaptors=3, localIP=6
+dbg1:syncOutputFile
+mod_tcp:tx=0, rx=0, lost=0, timeout=0, annotated=0, ipip_tx=0, sockets=0
+mod_tcp:tx=0, rx=0, lost=0, timeout=0, annotated=0, ipip_tx=0, sockets=0
+mod_tcp:tx=0, rx=0, lost=0, timeout=0, annotated=0, ipip_tx=0, sockets=0
+Received SIGINT
+dbg1:readSystemUUID: <4c253d42-fc70-6979-f820-4e7e20ffb0aa>
+hsflowd version 2.1.08
+_root:adaptor lo came up
+_root:adaptor h1-eth0 came up
+_root:adaptor h1-root came up
+_root:readL3Addresses: ifa_name=lo up=1 loopback=1 promisc=0 bond(master=0,slave=0)
+_root:readL3Addresses: ifa_name=h1-eth0 up=1 loopback=0 promisc=0 bond(master=0,slave=0)
+_root:readL3Addresses: ifa_name=h1-root up=1 loopback=0 promisc=0 bond(master=0,slave=0)
+_root:readL3Addresses: ifa_name=lo up=1 loopback=1 promisc=0 bond(master=0,slave=0)
+_root:readL3Addresses: found=127.0.0.1
+
+_root:readL3Addresses: ifa_name=h1-eth0 up=1 loopback=0 promisc=0 bond(master=0,slave=0)
+_root:readL3Addresses: found=10.0.0.1
+
+_root:readL3Addresses: ifa_name=h1-root up=1 loopback=0 promisc=0 bond(master=0,slave=0)
+_root:readL3Addresses: found=192.168.0.101
+
+_root:readL3Addresses: ifa_name=lo up=1 loopback=1 promisc=0 bond(master=0,slave=0)
+_root:readL3Addresses: found=::1
+
+_root:readL3Addresses: ifa_name=h1-eth0 up=1 loopback=0 promisc=0 bond(master=0,slave=0)
+_root:readL3Addresses: found=fe80::8ce1:3ff:fe00:1
+
+_root:readL3Addresses: ifa_name=h1-root up=1 loopback=0 promisc=0 bond(master=0,slave=0)
+_root:readL3Addresses: found=fe80::f48e:91ff:fe1a:8b61
+
+_root:readL3Addresses: found 3 extra L3 addresses
+_root:adaptor lo has v6 address 00000000000000000000000000000001 with scope 0x10
+_root:adaptor h1-eth0 has v6 address fe800000000000008ce103fffe000001 with scope 0x20
+_root:adaptor h1-root has v6 address fe80000000000000f48e91fffe1a8b61 with scope 0x20
+dbg1:selectAgentAddress
+dbg1:selectAgentAddress selected agentIP with highest priority: device=h1-eth0, address=10.0.0.1, previous=0.0.0.0, changed=YES
+dbg1:Using UUID read from BIOS (dmidecode)
+dbg1:creating sfl agent
+dbg1:creating sfl agent
+dbg1:installSFlowSettings: detected new config
+_root:ETHTOOL_GMODULEINF0 lo failed : Operation not supported
+_root:ETHTOOL_GMODULEINF0 h1-eth0 failed : Operation not supported
+dbg1:setAdaptorSpeed(ETHTOOL_GLINKSETTINGS2): h1-eth0 ifSpeed 0 -> 10000000000
+_root:Interface h1-eth0 (ifIndex=2) has peer_ifindex=2084
+_root:ETHTOOL_GMODULEINF0 h1-root failed : Operation not supported
+dbg1:setAdaptorSpeed(ETHTOOL_GLINKSETTINGS2): h1-root ifSpeed 0 -> 10000000000
+_root:Interface h1-root (ifIndex=2076) has peer_ifindex=2077
+_root:readL3Addresses: ifa_name=lo up=1 loopback=1 promisc=0 bond(master=0,slave=0)
+_root:readL3Addresses: ifa_name=h1-eth0 up=1 loopback=0 promisc=0 bond(master=0,slave=0)
+_root:readL3Addresses: ifa_name=h1-root up=1 loopback=0 promisc=0 bond(master=0,slave=0)
+_root:readL3Addresses: ifa_name=lo up=1 loopback=1 promisc=0 bond(master=0,slave=0)
+_root:readL3Addresses: found=127.0.0.1
+
+_root:readL3Addresses: ifa_name=h1-eth0 up=1 loopback=0 promisc=0 bond(master=0,slave=0)
+_root:readL3Addresses: found=10.0.0.1
+
+_root:readL3Addresses: ifa_name=h1-root up=1 loopback=0 promisc=0 bond(master=0,slave=0)
+_root:readL3Addresses: found=192.168.0.101
+
+_root:readL3Addresses: ifa_name=lo up=1 loopback=1 promisc=0 bond(master=0,slave=0)
+_root:readL3Addresses: found=::1
+
+_root:readL3Addresses: ifa_name=h1-eth0 up=1 loopback=0 promisc=0 bond(master=0,slave=0)
+_root:readL3Addresses: found=fe80::8ce1:3ff:fe00:1
+
+_root:readL3Addresses: ifa_name=h1-root up=1 loopback=0 promisc=0 bond(master=0,slave=0)
+_root:readL3Addresses: found=fe80::f48e:91ff:fe1a:8b61
+
+_root:readL3Addresses: found 3 extra L3 addresses
+_root:adaptor lo has v6 address 00000000000000000000000000000001 with scope 0x10
+_root:adaptor h1-eth0 has v6 address fe800000000000008ce103fffe000001 with scope 0x20
+_root:adaptor h1-root has v6 address fe80000000000000f48e91fffe1a8b61 with scope 0x20
+dbg1:evt_config_first: first valid configuration
+dbg1:main: evt_config_changed()
+dbg1:evt_config_shake: reply from poll
+mod_tcp:tx=0, rx=0, lost=0, timeout=0, annotated=0, ipip_tx=0, sockets=0
+mod_tcp:tx=0, rx=0, lost=0, timeout=0, annotated=0, ipip_tx=0, sockets=0
+mod_pcap:addBPFSocket(h1-eth0) speed=10000000000
+dbg1:h1-eth0 (speed=10000000000) using speed_default sampling rate = 10000
+mod_pcap:device h1-eth0 opened OK
+mod_pcap:device h1-eth0 offers DLT=1 (EN10MB)
+mod_pcap:device h1-eth0 offers DLT=143 (DOCSIS)
+mod_pcap:device h1-eth0 selecting encapsulation=1 (EN10MB)
+mod_pcap:setKernelSampling() kernel version (as int) == 5015000
+mod_pcap:sampling rate set to 10000 for dev=h1-eth0
+mod_pcap:setsockopt (SO_ATTACH_FILTER) status=0
+mod_pcap:kernel sampling OK
+_root:Interface h1-eth0 (ifIndex=2) has peer_ifindex=2084
+_root:Interface h1-root (ifIndex=2076) has peer_ifindex=2077
+_root:readL3Addresses: ifa_name=lo up=1 loopback=1 promisc=0 bond(master=0,slave=0)
+_root:readL3Addresses: ifa_name=h1-eth0 up=1 loopback=0 promisc=0 bond(master=0,slave=0)
+_root:readL3Addresses: ifa_name=h1-root up=1 loopback=0 promisc=0 bond(master=0,slave=0)
+_root:readL3Addresses: ifa_name=lo up=1 loopback=1 promisc=0 bond(master=0,slave=0)
+_root:readL3Addresses: found=127.0.0.1
+
+_root:readL3Addresses: ifa_name=h1-eth0 up=1 loopback=0 promisc=0 bond(master=0,slave=0)
+_root:readL3Addresses: found=10.0.0.1
+
+_root:readL3Addresses: ifa_name=h1-root up=1 loopback=0 promisc=0 bond(master=0,slave=0)
+_root:readL3Addresses: found=192.168.0.101
+
+_root:readL3Addresses: ifa_name=lo up=1 loopback=1 promisc=0 bond(master=0,slave=0)
+_root:readL3Addresses: found=::1
+
+_root:readL3Addresses: ifa_name=h1-eth0 up=1 loopback=0 promisc=0 bond(master=0,slave=0)
+_root:readL3Addresses: found=fe80::8ce1:3ff:fe00:1
+
+_root:readL3Addresses: ifa_name=h1-root up=1 loopback=0 promisc=0 bond(master=0,slave=0)
+_root:readL3Addresses: found=fe80::f48e:91ff:fe1a:8b61
+
+_root:readL3Addresses: found 3 extra L3 addresses
+_root:adaptor lo has v6 address 00000000000000000000000000000001 with scope 0x10
+_root:adaptor h1-eth0 has v6 address fe800000000000008ce103fffe000001 with scope 0x20
+_root:adaptor h1-root has v6 address fe80000000000000f48e91fffe1a8b61 with scope 0x20
+_root:interfaces added: 0 removed: 0 cameup: 0 wentdown: 0 changed: 2
+dbg1:selectAgentAddress
+dbg1:selectAgentAddress selected agentIP with highest priority: device=h1-eth0, address=10.0.0.1, previous=10.0.0.1, changed=NO
+_root:agentAddressChanged=NO
+_root:instances: adaptors=3, localIP=6
+dbg1:syncOutputFile
+dbg1:evt_config_shake: reply from packet
+dbg1:evt_config_shake: sync complete
+dbg1:drop_priviliges: getuid=0
+getrlimit(__RLIMIT_MEMLOCK) = 4206551040 (max=4206551040)
+getrlimit(__RLIMIT_NPROC) = 127916 (max=127916)
+getrlimit(RLIMIT_STACK) = 8388608 (max=4294967295)
+getrlimit(RLIMIT_CORE) = 0 (max=0)
+getrlimit(RLIMIT_CPU) = 4294967295 (max=4294967295)
+getrlimit(RLIMIT_DATA) = 4294967295 (max=4294967295)
+getrlimit(RLIMIT_FSIZE) = 4294967295 (max=4294967295)
+getrlimit(__RLIMIT_RSS) = 4294967295 (max=4294967295)
+getrlimit(RLIMIT_NOFILE) = 16384 (max=1048576)
+getrlimit(RLIMIT_AS) = 4294967295 (max=4294967295)
+getrlimit(__RLIMIT_LOCKS) = 4294967295 (max=4294967295)
+mod_tcp:tx=0, rx=0, lost=0, timeout=0, annotated=0, ipip_tx=0, sockets=0
+mod_tcp:tx=0, rx=0, lost=0, timeout=0, annotated=0, ipip_tx=0, sockets=0
+mod_tcp:tx=0, rx=0, lost=0, timeout=0, annotated=0, ipip_tx=0, sockets=0
+mod_tcp:tx=0, rx=0, lost=0, timeout=0, annotated=0, ipip_tx=0, sockets=0
+mod_tcp:tx=0, rx=0, lost=0, timeout=0, annotated=0, ipip_tx=0, sockets=0
+mod_tcp:tx=0, rx=0, lost=0, timeout=0, annotated=0, ipip_tx=0, sockets=0
+mod_tcp:tx=0, rx=0, lost=0, timeout=0, annotated=0, ipip_tx=0, sockets=0
+mod_tcp:tx=0, rx=0, lost=0, timeout=0, annotated=0, ipip_tx=0, sockets=0
+mod_tcp:tx=0, rx=0, lost=0, timeout=0, annotated=0, ipip_tx=0, sockets=0
+mod_tcp:tx=0, rx=0, lost=0, timeout=0, annotated=0, ipip_tx=0, sockets=0
+mod_tcp:tx=0, rx=0, lost=0, timeout=0, annotated=0, ipip_tx=0, sockets=0
+mod_tcp:tx=0, rx=0, lost=0, timeout=0, annotated=0, ipip_tx=0, sockets=0
+mod_tcp:tx=0, rx=0, lost=0, timeout=0, annotated=0, ipip_tx=0, sockets=0
+mod_tcp:tx=0, rx=0, lost=0, timeout=0, annotated=0, ipip_tx=0, sockets=0
+mod_tcp:tx=0, rx=0, lost=0, timeout=0, annotated=0, ipip_tx=0, sockets=0
+mod_tcp:tx=0, rx=0, lost=0, timeout=0, annotated=0, ipip_tx=0, sockets=0
+mod_tcp:tx=0, rx=0, lost=0, timeout=0, annotated=0, ipip_tx=0, sockets=0
+mod_tcp:tx=0, rx=0, lost=0, timeout=0, annotated=0, ipip_tx=0, sockets=0
+mod_tcp:tx=0, rx=0, lost=0, timeout=0, annotated=0, ipip_tx=0, sockets=0
+mod_tcp:tx=0, rx=0, lost=0, timeout=0, annotated=0, ipip_tx=0, sockets=0
+mod_tcp:tx=0, rx=0, lost=0, timeout=0, annotated=0, ipip_tx=0, sockets=0
+mod_tcp:tx=0, rx=0, lost=0, timeout=0, annotated=0, ipip_tx=0, sockets=0
+mod_tcp:tx=0, rx=0, lost=0, timeout=0, annotated=0, ipip_tx=0, sockets=0
+mod_tcp:tx=0, rx=0, lost=0, timeout=0, annotated=0, ipip_tx=0, sockets=0
+mod_tcp:tx=0, rx=0, lost=0, timeout=0, annotated=0, ipip_tx=0, sockets=0
+mod_tcp:tx=0, rx=0, lost=0, timeout=0, annotated=0, ipip_tx=0, sockets=0
+mod_tcp:tx=0, rx=0, lost=0, timeout=0, annotated=0, ipip_tx=0, sockets=0
+mod_tcp:tx=0, rx=0, lost=0, timeout=0, annotated=0, ipip_tx=0, sockets=0
+mod_tcp:tx=0, rx=0, lost=0, timeout=0, annotated=0, ipip_tx=0, sockets=0
+mod_tcp:tx=0, rx=0, lost=0, timeout=0, annotated=0, ipip_tx=0, sockets=0
+mod_tcp:tx=0, rx=0, lost=0, timeout=0, annotated=0, ipip_tx=0, sockets=0
+mod_tcp:tx=0, rx=0, lost=0, timeout=0, annotated=0, ipip_tx=0, sockets=0
+mod_tcp:tx=0, rx=0, lost=0, timeout=0, annotated=0, ipip_tx=0, sockets=0
+mod_tcp:tx=0, rx=0, lost=0, timeout=0, annotated=0, ipip_tx=0, sockets=0
+mod_tcp:tx=0, rx=0, lost=0, timeout=0, annotated=0, ipip_tx=0, sockets=0
+mod_tcp:tx=0, rx=0, lost=0, timeout=0, annotated=0, ipip_tx=0, sockets=0
+mod_tcp:tx=0, rx=0, lost=0, timeout=0, annotated=0, ipip_tx=0, sockets=0
+mod_tcp:tx=0, rx=0, lost=0, timeout=0, annotated=0, ipip_tx=0, sockets=0
+mod_tcp:tx=0, rx=0, lost=0, timeout=0, annotated=0, ipip_tx=0, sockets=0
+mod_tcp:tx=0, rx=0, lost=0, timeout=0, annotated=0, ipip_tx=0, sockets=0
+mod_tcp:tx=0, rx=0, lost=0, timeout=0, annotated=0, ipip_tx=0, sockets=0
+mod_tcp:tx=0, rx=0, lost=0, timeout=0, annotated=0, ipip_tx=0, sockets=0
+mod_tcp:tx=0, rx=0, lost=0, timeout=0, annotated=0, ipip_tx=0, sockets=0
+mod_tcp:tx=0, rx=0, lost=0, timeout=0, annotated=0, ipip_tx=0, sockets=0
+mod_tcp:tx=0, rx=0, lost=0, timeout=0, annotated=0, ipip_tx=0, sockets=0
+mod_tcp:tx=0, rx=0, lost=0, timeout=0, annotated=0, ipip_tx=0, sockets=0
+mod_tcp:tx=0, rx=0, lost=0, timeout=0, annotated=0, ipip_tx=0, sockets=0
+mod_tcp:tx=0, rx=0, lost=0, timeout=0, annotated=0, ipip_tx=0, sockets=0
+mod_tcp:tx=0, rx=0, lost=0, timeout=0, annotated=0, ipip_tx=0, sockets=0
+mod_tcp:tx=0, rx=0, lost=0, timeout=0, annotated=0, ipip_tx=0, sockets=0
+Received SIGINT
