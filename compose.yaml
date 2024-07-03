@@ -12,3 +12,12 @@ services:
       - '6343:6343/udp'
       - '8008:8008'
 
+  onos:
+    image: onosproject/onos:2.5.1
+    container_name: onos
+    restart: unless-stopped
+    ports:
+      - '8181:8181'
+      - '8001:8101'
+      - '6653:6653'
+      - '6640:6640'
