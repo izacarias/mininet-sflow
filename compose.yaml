@@ -1,5 +1,3 @@
-version: '3.8'
-
 services:
   sflow-rt:
     build: ./sflow-rt
@@ -12,6 +10,7 @@ services:
       - '6343:6343/udp'
       - '8008:8008'
 
+  
   onos:
     image: onosproject/onos:2.5.1
     container_name: onos
@@ -21,3 +20,22 @@ services:
       - '8001:8101'
       - '6653:6653'
       - '6640:6640'
+  
+  
+  influxdb:
+    image: influxdb:2.7.6
+    container_name: influxdb2
+    restart: unless-stopped
+    volumes:
+      # Mount for influxdb data directory and configuration
+      - ./influxdb2/data:/var/lib/influxdb2:rw
+      # - ./influxdb2/config:/etc/influxdb2
+    ports:
+      - "8086:8086"
+    environment:
+      - DOCKER_INFLUXDB_INIT_USERNAME = admin
+      - DOCKER_INFLUXDB_INIT_PASSWORD = admin123
+      - DOCKER_INFLUXDB_INIT_ORG = ibn
+      - DOCKER_INFLUXDB_INIT_BUCKET = ibn
+      - DOCKER_INFLUXDB_INIT_ADMIN_TOKEN = OaujNLMeQcH3ziNdeP-huuOIdiJPgSwh2nR9mDqwF5tlu5kYQ6RO1KzCdr8lBShb_w0vGwxxWoZulLIojIEd3w== 
+      - DOCKER_INFLUXDB_INIT_MODE = setup
